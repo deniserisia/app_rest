@@ -1,18 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Título para Pratos -->
     <TextView
+        android:id="@+id/tvPratos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="PRATOS"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
 
+    <!-- Opção: Arroz de Camarão -->
+    <LinearLayout
+        android:id="@+id/llArrozCamarao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvPratos"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <CheckBox
+            android:id="@+id/cbArrozCamarao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arroz de Camarão R$ 56,00"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+    </LinearLayout>
+
+    <!-- Opção: Carne de Sol -->
+    <LinearLayout
+        android:id="@+id/llCarneSol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llArrozCamarao"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <CheckBox
+            android:id="@+id/cbCarneSol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carne de Sol R$ 100,00"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+    </LinearLayout>
+
+    <!-- Opção: Picanha na Brasa -->
+    <LinearLayout
+        android:id="@+id/llPicanhaBrasa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llCarneSol"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <CheckBox
+            android:id="@+id/cbPicanhaBrasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Picanha na Brasa R$ 120,00"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+    </LinearLayout>
+
+    <!-- Título para Bebidas -->
+    <TextView
+        android:id="@+id/tvBebidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BEBIDAS"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/llPicanhaBrasa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Opção: Coca-cola -->
+    <LinearLayout
+        android:id="@+id/llCocaCola"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvBebidas"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <CheckBox
+            android:id="@+id/cbCocaCola"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coca-cola R$ 10,00"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+    </LinearLayout>
+
+    <!-- Opção: Água -->
+    <LinearLayout
+        android:id="@+id/llAgua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llCocaCola"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <CheckBox
+            android:id="@+id/cbAgua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Água R$ 3,00"
+            android:layout_gravity="center"
+            android:layout_weight="3"/>
+
+        <!-- TextView para exibir o total do pedido -->
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/llAgua"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+
+        <!-- Botão para Calcular Total do Pedido -->
+        <Button
+            android:id="@+id/btnCalcularTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular Total do Pedido"
+            app:layout_constraintTop_toBottomOf="@id/llAgua"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
