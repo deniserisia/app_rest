@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cbCarneSol: CheckBox
     private lateinit var cbPicanhaBrasa: CheckBox
     private lateinit var cbCocaCola: CheckBox
+    private lateinit var cbLagostaNaBrasa: CheckBox
     private lateinit var cbAgua: CheckBox
     private lateinit var tvTotal: TextView
     private lateinit var tvResultado: TextView
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private val valorArrozCamarao: Int by lazy { resources.getInteger(R.integer.valor_arroz_camarao) }
     private val valorCarneSol: Int by lazy { resources.getInteger(R.integer.valor_carne_sol) }
     private val valorPicanhaBrasa: Int by lazy { resources.getInteger(R.integer.valor_picanha_brasa) }
+    private val valorLagostaNaBrasa: Int by lazy { resources.getInteger(R.integer.valor_lagosta) }
     private val valorCocaCola: Int by lazy { resources.getInteger(R.integer.valor_coca_cola) }
     private val valorAgua: Int by lazy { resources.getInteger(R.integer.valor_agua) }
 
@@ -35,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         cbArrozCamarao = findViewById(R.id.cbArrozCamarao)
         cbCarneSol = findViewById(R.id.cbCarneSol)
         cbPicanhaBrasa = findViewById(R.id.cbPicanhaBrasa)
+        cbLagostaNaBrasa = findViewById(R.id.cbLagostaNaBrasa)
         cbCocaCola = findViewById(R.id.cbCocaCola)
         cbAgua = findViewById(R.id.cbAgua)
         tvTotal = findViewById(R.id.tvTotal)
@@ -44,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         setCheckBoxClickListener(cbArrozCamarao, valorArrozCamarao)
         setCheckBoxClickListener(cbCarneSol, valorCarneSol)
         setCheckBoxClickListener(cbPicanhaBrasa, valorPicanhaBrasa)
+        setCheckBoxClickListener(cbLagostaNaBrasa, valorLagostaNaBrasa)
         setCheckBoxClickListener(cbCocaCola, valorCocaCola)
         setCheckBoxClickListener(cbAgua, valorAgua)
 
