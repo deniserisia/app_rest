@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="backapp">#1F2544</color>
+    <color name="name_cabecalho">#F3F3F3</color>
+    <color name="atributos">#FFC107</color>
 </resources>
