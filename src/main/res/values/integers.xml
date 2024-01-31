@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Valores inteiros para cada prato -->
+    <integer name="valor_arroz_camarao">56</integer>
+    <integer name="valor_carne_sol">100</integer>
+    <integer name="valor_picanha_brasa">120</integer>
+
+    <!-- Valores inteiros para cada bebida -->
+    <integer name="valor_agua">3</integer>
+    <integer name="valor_coca_cola">10</integer>
+</resources>

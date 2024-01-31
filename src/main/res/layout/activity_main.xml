@@ -32,13 +32,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-
     <!-- Título para Pratos -->
     <TextView
         android:id="@+id/tvPratos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PRATOS"
+        android:text="@string/tv_pratos"
         android:textColor="@color/atributos"
         android:layout_gravity="center"
         android:gravity="center"
@@ -50,6 +49,15 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/atributos"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPratos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Opção: Arroz de Camarão -->
     <LinearLayout
@@ -75,9 +83,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/name_cabecalho"
-            android:text="Arroz de Camarão R$ 56,00"
+            android:text="@string/arroz_camarao"
+            android:layout_weight="@integer/valor_arroz_camarao"
             android:layout_gravity="center"
-            android:layout_weight="3"/>
+            />
     </LinearLayout>
 
     <!-- Opção: Carne de Sol -->
@@ -103,10 +112,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Carne de Sol R$ 100,00"
+            android:text="@string/carne_sol"
+            android:layout_weight="@integer/valor_carne_sol"
             android:textColor="@color/name_cabecalho"
             android:layout_gravity="center"
-            android:layout_weight="3"/>
+            />
     </LinearLayout>
 
     <!-- Opção: Picanha na Brasa -->
@@ -132,10 +142,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Picanha na Brasa R$ 120,00"
+            android:text="@string/picanha_brasa"
+            android:layout_weight="@integer/valor_picanha_brasa"
             android:layout_gravity="center"
             android:textColor="@color/name_cabecalho"
-            android:layout_weight="3"/>
+            />
     </LinearLayout>
 
     <!-- Título para Bebidas -->
@@ -143,7 +154,7 @@
         android:id="@+id/tvBebidas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BEBIDAS"
+        android:text="@string/tv_bebidas"
         android:textColor="@color/atributos"
         android:layout_gravity="center"
         android:gravity="center"
@@ -155,6 +166,15 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/atributos"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/tvBebidas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Opção: Coca-cola -->
     <LinearLayout
@@ -179,10 +199,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Coca-cola R$ 10,00"
+            android:text="@string/coca_cola"
+            android:layout_weight="@integer/valor_coca_cola"
             android:textColor="@color/name_cabecalho"
             android:layout_gravity="center"
-            android:layout_weight="3"/>
+            />
     </LinearLayout>
 
     <!-- Opção: Água -->
@@ -205,43 +226,77 @@
             android:buttonTint="@android:color/white"
             android:layout_weight="1"/>
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Água R$ 3,00"
+            android:text="@string/agua"
+            android:layout_weight="@integer/valor_agua"
             android:textColor="@color/name_cabecalho"
             android:layout_gravity="center"
-            android:layout_weight="3"/>
-
-        <!-- TextView para exibir o total do pedido -->
-        <TextView
-            android:id="@+id/tvTotal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            app:layout_constraintTop_toBottomOf="@id/llAgua"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
-
-
-        <!-- Botão para Calcular Total do Pedido -->
+            />
 
     </LinearLayout>
-    <Button
-        android:id="@+id/btnCalcularTotal"
+
+    <!-- TextView para exibir o total do pedido -->
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="7dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="6dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llAgua" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/atributos"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Calcular Total do Pedido"
-        android:backgroundTint="@color/white"
-        android:textColor="@color/black"
-        android:layout_gravity="center"
+        android:text="@string/resultado_pedido"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/llAgua"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/llButtons"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tvTotal" />
+        android:layout_marginTop="18dp"/>
 
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="26dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnCalcularTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calcular_total_pedido"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btnEnviarPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enviar_pedido"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
 </LinearLayout>
