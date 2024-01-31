@@ -1,6 +1,7 @@
 package com.drc.app_rest
 
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private val valorAgua: Int by lazy { resources.getInteger(R.integer.valor_agua) }
 
     private var totalPedido: Float = 0.0f
+    private lateinit var btnEnviarPedido: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,13 +47,21 @@ class MainActivity : AppCompatActivity() {
         setCheckBoxClickListener(cbCocaCola, valorCocaCola)
         setCheckBoxClickListener(cbAgua, valorAgua)
 
+        // Inicialize o botão Enviar Pedido
+        btnEnviarPedido = findViewById(R.id.btnEnviarPedido)
 
+        // ...
+
+        btnEnviarPedido.setOnClickListener {
+            // Chame o método para enviar o pedido
+            enviarPedido()
+        }
         btnCalcularTotal.setOnClickListener {
             calcularTotalPedido()
         }
     }
 
-    private fun setCheckBoxClickListener(checkBox: CheckBox, valorItem: Int) {
+        private fun setCheckBoxClickListener(checkBox: CheckBox, valorItem: Int) {
         checkBox.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 totalPedido += valorItem
@@ -69,5 +79,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun atualizarExibicaoTotal() {
         tvTotal.text = getString(R.string.total_pedido, totalPedido)
+    }
+
+    private fun enviarPedido() {
+        exibirMensagem("Pedido enviado para a cozinha com sucesso.")
+    }
+
+    private fun exibirMensagem(mensagem: String) {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(mensagem)
+            .setPositiveButton("OK") { _, _ ->
+            }
+            .create()
+            .show()
     }
 }

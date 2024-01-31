@@ -5,12 +5,13 @@
     <string name="total_pedido">Total do Pedido: R$ %.2f</string>
     <string name="resultado_pedido">Valor Total do Pedido:</string>
     <string name="calcular_total_pedido">Calcular Total do Pedido</string>
-    <string name="enviar_pedido">Enviar Pedido</string>
+    <string name="enviar_pedido">Realizar Pedido</string>
     <string name="agua">Agua - R$:3,00</string>
     <string name="coca_cola">Coca Cola - R$:10,00</string>
     <string name="tv_bebidas">BEBIDAS</string>
     <string name="picanha_brasa"> Picanha na Brasa - R$:120,00</string>
     <string name="carne_sol"> Carne do Sol - R$:100,00</string>
     <string name="arroz_camarao"> Arroz de Camarão - R$:56,00</string>
+    <string name="lagosta_brasa"> Lagosta na Brasa - R$:98,00</string>
     <string name="tv_pratos">Pratos</string>
 </resources>
